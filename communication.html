@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Communication Habits</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #e0f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
+        }
+        .header {
+            background-color: #ffeb3b;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #0288d1;
+            transition: color 0.3s ease;
+        }
+        .header h1:hover {
+            color: #ff5722;
+        }
+        /* Add multiple penguin GIFs distributed widely in the background */
+        .header::before, .header::after {
+            content: '';
+            position: absolute;
+            background: url('pengu.gif') no-repeat center center;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+        }
+        .header::before {
+            top: 10%;
+            left: 5%;
+        }
+        .header::after {
+            top: 50%;
+            right: 10%;
+        }
+        .header::before:nth-child(3) {
+            top: 60%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .header > * {
+            position: relative;
+            z-index: 1;
+        }
+        .info-section {
+            background-color: #b2ebf2;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-section h2 {
+            font-size: 1.8rem;
+            color: #00695c;
+            transition: color 0.3s ease;
+        }
+        .info-section h2:hover {
+            color: #004d40;
+        }
+        .info-section p {
+            font-size: 1.2rem;
+        }
+        .gif-container {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            animation: float 5s infinite;
+        }
+        .gif-container img:hover {
+            transform: scale(1.05);
+        }
+        .btn-special {
+            background-color: #0288d1;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-special:hover {
+            background-color: #ff5722;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1 class="animate__animated animate__fadeIn">How Penguins Communicate</h1>
+        <p>Learn how penguins "talk" to each other in the wild!</p>
+        <button class="btn-special">Explore More</button>
+    </div>
+
+    <!-- Information Section 1: Penguin to Penguin Communication -->
+    <div class="container info-section animate__animated animate__fadeIn">
+        <h2>Penguin to Penguin Communication</h2>
+        <p>
+            Penguins are highly social animals that communicate through a range of sounds and body language. They make loud calls to find their mates and chicks in large colonies, and they also use eye contact and bowing as part of their greetings.
+            Penguins have unique voices that help them recognize each other even in crowded colonies!
+        </p>
+        <!-- GIF Section 1 -->
+        <div class="gif-container">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG9wenlueG50cXJqc3ZoOGhqcXp6OGtvbDg0ZHZ3OXVidWZ5ZXJhcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Er22KKA7vzZJK/giphy.gif" alt="Penguin calling gif">
+        </div>
+    </div>
+
+    <!-- Information Section 2: Penguin Communication with Other Species -->
+    <div class="container info-section animate__animated animate__fadeIn">
+        <h2>Communicating with Other Species</h2>
+        <p>
+            Penguins are not just communicative with their own kind. They also make warning sounds when predators are nearby. If a penguin senses danger, it might squawk to alert its fellow penguins and other nearby animals.
+            While penguins don't usually "talk" to other species directly, their body language and alertness can send signals to others about their environment.
+        </p>
+        <!-- GIF Section 2 -->
+        <div class="gif-container">
+            <img src="penguin_animal.gif" alt="Penguin warning gif">
+        </div>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div class="container info-section animate__animated animate__fadeIn">
+        <h2>Fun Penguin Facts</h2>
+        <p>
+            Did you know? Penguins can "sing" to their partners and chicks to find them in the crowd, even from far away. And baby penguins, called chicks, can make adorable peeping sounds to call their parents!
+        </p>
+        <!-- GIF Section 3 -->
+        <div class="gif-container">
+            <img src="penguin_fact.gif" alt="Penguin chick communication gif">
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
