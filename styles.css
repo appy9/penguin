@@ -96,3 +96,235 @@ footer {
   text-align: center;
   padding: 10px 20px;
 }
+
+
+body {
+  background-color: #E3F2FD;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0288D1;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav {
+  background-color: #03A9F4;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #0277BD;
+  border-bottom: 2px solid #0288D1;
+  padding-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.content img {
+  width: 150px;
+  height: auto;
+  border: 3px solid #81D4FA;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.content h3 {
+  margin: 0;
+  color: #01579B;
+}
+
+.content p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #212121;
+}
+
+footer {
+  background-color: #0288D1;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: 0.6s;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 33.3333%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.slide img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #81D4FA;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 0 5px;
+}
+
+.manual-btn:hover {
+  background: #81D4FA;
+}
+
+#img-1:checked ~ .slides {
+  margin-left: 0;
+}
+
+#img-2:checked ~ .slides {
+  margin-left: -33.3333%;
+}
+
+#img-3:checked ~ .slides {
+  margin-left: -66.6666%;
+}
+
+/* Hover Effects */
+.image-hover img {
+  transition: transform 0.3s;
+}
+
+.image-hover img:hover {
+  transform: scale(1.1);
+}
+
+/* Existing CSS styles... */
+
+/* Slider Styles */
+.slider {
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* 100% * number of slides */
+  height: 100%;
+  transition: margin-left 0.6s ease;
+}
+
+.slide {
+  width: 33.3333%; /* 100% / number of slides */
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.slide img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/* Manual navigation styles */
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #81D4FA;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.4s;
+  margin: 0 5px;
+}
+
+.manual-btn:hover {
+  background: #81D4FA;
+}
+
+/* Slide control with radio buttons */
+#img-1:checked ~ .slides {
+  margin-left: 0;
+}
+
+#img-2:checked ~ .slides {
+  margin-left: -100%;
+}
+
+#img-3:checked ~ .slides {
+  margin-left: -200%;
+}
+
+/* Optional: Adjust the slide titles and descriptions */
+.slide h3, .slide p {
+  color: #01579B;
+}
+
+/* Other existing styles... */
