@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animal Kingdom</title>
+  <title>All About Penguins</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Children-friendly font */
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      background-color: #f0f8ff; /* Subtle, soft background */
     }
+    #home p {
+  color: #333; /* Darker shade for better contrast */
+}
     header {
       background-color: #4CAF50;
       padding: 10px 20px;
@@ -35,7 +39,7 @@
     #hero {
       text-align: center;
       padding: 100px 20px;
-      background-image: url('hero-background.jpg');
+      background-image: url('penguins-hero.jpg');
       background-size: cover;
       color: white;
     }
@@ -46,40 +50,9 @@
       font-size: 1.5rem;
       margin: 20px 0;
     }
-    #hero button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: #f39c12;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
     #about, #gallery, #contact {
       padding: 50px 20px;
       text-align: center;
-    }
-    #gallery .gallery-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    #gallery .gallery-item {
-      width: 200px;
-    }
-    #gallery img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    form input, form textarea, form button {
-      margin: 10px 0;
-      padding: 10px;
-      font-size: 1rem;
     }
     footer {
       background-color: #333;
@@ -92,48 +65,32 @@
 <body>
   <header>
     <nav>
-      <div class="logo">Animal Kingdom</div>
+      <div class="logo">All About Penguins</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="diet.html">Diet</a></li> <!-- Link to diet.html -->
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="diet.html">Diet Information</a></li>
+        <li><a href="gallery.html">Image Gallery</a></li>
+        <li><a href="reproduction.html">Mating & Reproduction</a></li>
+        <li><a href="habitat.html">Habitat Information</a></li>
+        <li><a href="scientific.html">Scientific Name & Classification</a></li>
+        <li><a href="anatomy.html">Anatomy & Biology</a></li>
+        <li><a href="behavior.html">Behavior</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="hero">
-    <h1>Welcome to the Animal Kingdom</h1>
-    <p>Discover amazing facts about the world's most fascinating creatures.</p>
-    <button>Learn More</button>
+    <h1>Welcome to the World of Penguins</h1>
+    <p>Discover the fascinating life of penguins, from their habits to their habitats.</p>
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>We are dedicated to providing information about a wide variety of animals. From wild to domestic, we bring the animal kingdom closer to you.</p>
-  </section>
-
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-container">
-      <div class="gallery-item"><img src="animal1.jpg" alt="Animal 1"></div>
-      <div class="gallery-item"><img src="animal2.jpg" alt="Animal 2"></div>
-      <div class="gallery-item"><img src="animal3.jpg" alt="Animal 3"></div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <h2>About Penguins</h2>
+    <p>Penguins are flightless seabirds known for their distinctive black and white coloring and their adorable waddle. They thrive in cold climates, especially in Antarctica, and are great swimmers.</p>
   </section>
 
   <footer>
-    <p>&copy; 2024 Animal Kingdom. All rights reserved.</p>
+    <p>&copy; 2024 All About Penguins. All rights reserved.</p>
   </footer>
 </body>
 </html>

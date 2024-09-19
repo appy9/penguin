@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Penguin Diet Information</title>
+  <title>Penguin Image Gallery</title>
   <style>
     body {
       font-family: 'Comic Sans MS', 'Comic Sans', cursive;
@@ -33,25 +33,37 @@
       text-decoration: none;
       font-size: 1.2rem;
     }
-    #diet-info {
+    #gallery {
       padding: 50px 20px;
       text-align: center;
     }
-    #diet-info h2 {
+    #gallery h2 {
       font-size: 2rem;
       margin-bottom: 20px;
     }
-    #diet-info p {
-      font-size: 1.2rem;
+    #gallery .gallery-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    #gallery .gallery-item {
+      width: 200px;
       margin-bottom: 20px;
     }
-    #diet-info ul {
-      list-style: none;
-      padding: 0;
+    #gallery img {
+      width: 100%;
+      border-radius: 10px;
     }
-    #diet-info ul li {
-      font-size: 1.1rem;
-      margin: 10px 0;
+    #gallery .add-image {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
     footer {
       background-color: #333;
@@ -78,19 +90,30 @@
     </nav>
   </header>
 
-  <section id="diet-info">
-    <h2>Penguin Diet Information</h2>
-    <p>Penguins primarily feed on seafood depending on the species and habitat. Their diet generally includes:</p>
-    <ul>
-      <li>Fish: Small varieties like anchovies, sardines, and mackerel.</li>
-      <li>Squid: Larger penguins consume squid regularly.</li>
-      <li>Krill: Especially for penguins living in the Antarctic regions.</li>
-    </ul>
-    <p>For more detailed information, visit these external links:</p>
-    <ul>
-      <li><a href="https://www.nationalgeographic.com/animals/birds/facts/penguins" target="_blank">National Geographic - Penguins</a></li>
-      <li><a href="https://www.worldwildlife.org/species/penguin" target="_blank">World Wildlife Fund - Penguins</a></li>
-    </ul>
+  <section id="gallery">
+    <h2>Penguin Image Gallery</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="penguin1.jpg" alt="Penguin 1">
+      </div>
+      <div class="gallery-item">
+        <img src="penguin2.jpg" alt="Penguin 2">
+      </div>
+      <div class="gallery-item">
+        <img src="penguin3.jpg" alt="Penguin 3">
+      </div>
+      <div class="gallery-item">
+        <img src="penguin4.jpg" alt="Penguin 4">
+      </div>
+      <div class="gallery-item">
+        <img src="penguin5.jpg" alt="Penguin 5">
+      </div>
+      <div class="gallery-item">
+        <img src="penguin6.jpg" alt="Penguin 6">
+      </div>
+    </div>
+
+    <button class="add-image" onclick="alert('This feature is under development!')">Add New Image</button>
   </section>
 
   <footer>
