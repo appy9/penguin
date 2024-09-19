@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #4CAF50;
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  color: white;
+}
+
+#hero h1 {
+  font-size: 3rem;
+}
+
+#hero p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+#hero button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#about, #gallery, #contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#gallery .gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#gallery .gallery-item {
+  width: 200px;
+}
+
+#gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input, form textarea, form button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+}

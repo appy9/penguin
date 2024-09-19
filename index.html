@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Kingdom</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    header {
+      background-color: #4CAF50;
+      padding: 10px 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
+    .nav-links li {
+      margin: 0 15px;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    #hero {
+      text-align: center;
+      padding: 100px 20px;
+      background-image: url('hero-background.jpg');
+      background-size: cover;
+      color: white;
+    }
+    #hero h1 {
+      font-size: 3rem;
+    }
+    #hero p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    #hero button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #about, #gallery, #contact {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    #gallery .gallery-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    #gallery .gallery-item {
+      width: 200px;
+    }
+    #gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    form input, form textarea, form button {
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Animal Kingdom</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="diet.html">Diet</a></li> <!-- Link to diet.html -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <h1>Welcome to the Animal Kingdom</h1>
+    <p>Discover amazing facts about the world's most fascinating creatures.</p>
+    <button>Learn More</button>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to providing information about a wide variety of animals. From wild to domestic, we bring the animal kingdom closer to you.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <div class="gallery-item"><img src="animal1.jpg" alt="Animal 1"></div>
+      <div class="gallery-item"><img src="animal2.jpg" alt="Animal 2"></div>
+      <div class="gallery-item"><img src="animal3.jpg" alt="Animal 3"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Animal Kingdom. All rights reserved.</p>
+  </footer>
+</body>
+</html>
