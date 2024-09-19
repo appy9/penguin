@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Kingdom</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+      body {
+        font-family: "Nunito", sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        line-height: 1.6;
+      }
+      .container {
+        margin: 0 auto;
+        background-color: #f0f8ff;
+        border-radius: 20px;
+        /* padding: 20px; */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #0066cc;
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+      }
+      .fact-card {
+        background-color: #f0f9ff;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 0 20px 20px 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+      .fact-card:hover {
+        transform: translateY(-5px);
+      }
+      .fact-number {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #0099ff;
+        margin-bottom: 10px;
+      }
+      .penguin-image {
+        display: block;
+        /* margin: 30px auto; */
+        max-width: 100%;
+        /* border-radius: 15px; */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .fun-fact-title {
+        text-align: center;
+        color: #ff6600;
+        font-size: 1.8em;
+        margin-top: 40px;
+      }
+      ol.gradient-list > li::before,
+      ol.gradient-list > li {
+        box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
+          0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+        margin: 0 20px;
+      }
+
+      ol.gradient-list {
+        counter-reset: gradient-counter;
+        list-style: none;
+        margin: 4rem 0;
+        padding-left: 1rem;
+      }
+      ol.gradient-list > li {
+        background: white;
+        border-radius: 0 0.5rem 0.5rem 0.5rem;
+        counter-increment: gradient-counter;
+        margin-top: 1rem;
+        min-height: 3rem;
+        padding: 1rem 1rem 1rem 5rem;
+        position: relative;
+        font-weight: bolder;
+      }
+      ol.gradient-list > li::before,
+      ol.gradient-list > li::after {
+        background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+        border-radius: 1rem 1rem 0 1rem;
+        content: "";
+        height: 3rem;
+        left: -1rem;
+        overflow: hidden;
+        position: absolute;
+        top: -1rem;
+        width: 3rem;
+      }
+      ol.gradient-list > li::before {
+        align-items: flex-end;
+        content: counter(gradient-counter);
+        color: #1d1f20;
+        display: flex;
+        font: 900 1.5em/1 "Montserrat";
+        justify-content: flex-end;
+        padding: 0.125em 0.25em;
+        z-index: 1;
+      }
+      ol.gradient-list > li:nth-child(10n + 1):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.2) 0%,
+          rgba(253, 220, 50, 0.2) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 2):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.4) 0%,
+          rgba(253, 220, 50, 0.4) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 3):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.6) 0%,
+          rgba(253, 220, 50, 0.6) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 4):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.8) 0%,
+          rgba(253, 220, 50, 0.8) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 5):before {
+        background: linear-gradient(135deg, #a2ed56 0%, #fddc32 100%);
+      }
+      ol.gradient-list > li:nth-child(10n + 6):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.8) 0%,
+          rgba(253, 220, 50, 0.8) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 7):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.6) 0%,
+          rgba(253, 220, 50, 0.6) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 8):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.4) 0%,
+          rgba(253, 220, 50, 0.4) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 9):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0.2) 0%,
+          rgba(253, 220, 50, 0.2) 100%
+        );
+      }
+      ol.gradient-list > li:nth-child(10n + 10):before {
+        background: linear-gradient(
+          135deg,
+          rgba(162, 237, 86, 0) 0%,
+          rgba(253, 220, 50, 0) 100%
+        );
+      }
+      ol.gradient-list > li + li {
+        margin-top: 2rem;
+      }
+      .header {
+        position: relative;
+        width: 100%;
+        height: 600px; /* Adjusted height */
+        overflow: hidden; /* Re-added to ensure image doesn't exceed container */
+      }
+      .header-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+      }
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 3.5em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        text-align: left;
+        font-weight: unset;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        background-color: #4caf50;
+        padding: 10px 20px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+      }
+      .nav-links li {
+        margin: 0 15px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      #hero {
+        text-align: center;
+        padding: 100px 20px;
+        background-image: url("hero-background.jpg");
+        background-size: cover;
+        color: white;
+      }
+      #hero h1 {
+        font-size: 3rem;
+      }
+      #hero p {
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+      #hero button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #about,
+      #gallery,
+      #contact {
+        padding: 50px 20px;
+        text-align: center;
+      }
+      #gallery .gallery-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      #gallery .gallery-item {
+        width: 200px;
+      }
+      #gallery img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      form input,
+      form textarea,
+      form button {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 1rem;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">All About Penguins</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="diet.html">Diet Information</a></li>
+          <li><a href="gallery.html">Image Gallery</a></li>
+          <li><a href="reproduction.html">Mating & Reproduction</a></li>
+          <li><a href="habitat.html">Habitat Information</a></li>
+          <li>
+            <a href="scientific.html">Scientific Name & Classification</a>
+          </li>
+          <li><a href="anatomy.html">Anatomy & Biology</a></li>
+          <li><a href="behavior.html">Behavior</a></li>
+          <li><a href="facts.html">Fun Facts</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fun Penguin Facts</title>
+        <style></style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <!-- <img src="/api/placeholder/1200/400" alt="Penguins in their habitat" class="header-image"> -->
+            <img
+              src="cover.jpg"
+              alt="Cute penguins"
+              class="penguin-image header-image"
+            />
+            <div class="overlay"></div>
+            <h1 class="title">Fun<br />Penguin<br />Facts</h1>
+          </div>
+
+          <!-- <h1>Fun Penguin Facts</h1> -->
+
+          <ol class="gradient-list">
+            <li>
+              A penguin’s thick feathers aren’t the only way this bird stays
+              warm. A gland near the base of its tail provides waterproof oil.
+              Penguins spend several hours each day covering their feathers with
+              this oil and give extra attention to the task before swimming.
+            </li>
+            <li>
+              The Emperor Penguin is the tallest of all penguins, standing at
+              about 4 feet tall.
+            </li>
+            <li>
+              Many male penguins gift female penguins with rocks in order to woo
+              them.
+            </li>
+            <li>
+              The smallest penguin species is the Little Blue Penguin, which is
+              only about 16 inches tall.
+            </li>
+            <li>
+              Penguins don't have teeth. Instead, they have backward-facing
+              spines in their mouths that help them swallow fish.
+            </li>
+            <li>
+              Male Emperor Penguins keep their eggs warm by balancing them on
+              their feet and covering them with a flap of skin.
+            </li>
+            <li>
+              Penguins' wings are called flippers. They use them to "fly"
+              through the water at speeds up to 15 miles per hour.
+            </li>
+            <li>
+              Emperor Penguins can dive up to 1,800 feet deep in the ocean.
+              That's as deep as 6 football fields!
+            </li>
+            <li>
+              Penguins can drink salt water! They have a special gland that
+              filters out the salt.
+            </li>
+            <li>
+              Most penguins live in the Southern Hemisphere, but the Galapagos
+              Penguin lives north of the equator.
+            </li>
+            <li>
+              The black and white “tuxedo” look donned by most penguin species
+              is a clever camouflage called countershading.
+            </li>
+            <li>
+              Penguins' black and white coloring is called "countershading" and
+              it helps camouflage them in the water.
+            </li>
+            <li>
+              A group of penguins in the water is called a raft but on land
+              they’re called a waddle!
+            </li>
+          </ol>
+        </div>
+      </body>
+    </html>
+
+    <footer>
+      <p>&copy; 2024 Animal Kingdom. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
